@@ -378,7 +378,7 @@ class Terminal {
       rootDirEntry.createDirectory(folders[0])
       .then((dirEntry) {
         // Recursively add the new subfolder if we still have a subfolder to create.
-        if (folders.length != 0) {
+        if (folders.isNotEmpty) {
           folders.removeAt(0);
           createDir(dirEntry, folders);
         }
